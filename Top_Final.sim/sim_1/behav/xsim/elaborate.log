@@ -1,0 +1,37 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/Vivado/2019.1/bin/unwrapped/win64.o/xelab.exe -wto 76845ada04c24b0089975ea4211440be --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot CPU_top_behav xil_defaultlib.CPU_top xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package xil_defaultlib.stype
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_signed
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling module xil_defaultlib.glbl
+Compiling architecture rtl of entity xil_defaultlib.ALU [alu_default]
+Compiling architecture rtl of entity xil_defaultlib.Control [control_default]
+Compiling architecture rtl of entity xil_defaultlib.DataMemory [datamemory_default]
+Compiling architecture rtl of entity xil_defaultlib.Registera [registera_default]
+Compiling architecture rtl of entity xil_defaultlib.InstructionMemory [instructionmemory_default]
+Compiling architecture behavioral of entity xil_defaultlib.Hex2LED [hex2led_default]
+Compiling architecture behavioral of entity xil_defaultlib.SevenSeg_Top [sevenseg_top_default]
+Compiling architecture logic of entity xil_defaultlib.debounce [debounce_default]
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
+Compiling architecture mmcme2_adv_v of entity unisim.MMCME2_ADV [\MMCME2_ADV(clkfbout_mult_f=10.0...]
+Compiling architecture structure of entity xil_defaultlib.clk_wiz_0_clk_wiz_0_clk_wiz [clk_wiz_0_clk_wiz_0_clk_wiz_defa...]
+Compiling architecture structure of entity xil_defaultlib.clk_wiz_0 [clk_wiz_0_default]
+Compiling architecture struct of entity xil_defaultlib.cpu_top
+Built simulation snapshot CPU_top_behav

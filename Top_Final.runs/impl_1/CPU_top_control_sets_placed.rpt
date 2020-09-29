@@ -1,0 +1,263 @@
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
+| Date         : Mon Dec 16 14:00:53 2019
+| Host         : LAPTOP-V1E3ESMK running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file CPU_top_control_sets_placed.rpt
+| Design       : CPU_top
+| Device       : xc7a35t
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   185 |
+|    Minimum number of control sets                        |   185 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    54 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   185 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     3 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |    25 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |   151 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              81 |           56 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              41 |           14 |
+| Yes          | No                    | No                     |             480 |          169 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |            2800 |         1195 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------+----------------------------------+----------------------+------------------+----------------+
+|       Clock Signal      |           Enable Signal          |   Set/Reset Signal   | Slice Load Count | Bel Load Count |
++-------------------------+----------------------------------+----------------------+------------------+----------------+
+|  CLK100MHZ_IBUF         |                                  |                      |                1 |              1 |
+|  U2/ALUControl_reg[0]_0 |                                  |                      |                1 |              1 |
+|  U5/PC_reg[10]_0        |                                  | U2/Reset_reg_i_3_n_2 |                1 |              1 |
+|  U5/PC_reg[10]_1        |                                  | U2/Reset_reg_i_3_n_2 |                1 |              1 |
+|  U5/E[0]                |                                  | U2/Reset_reg_i_3_n_2 |                2 |              4 |
+|  U6/slowCLK             |                                  | U6/clear             |                1 |              4 |
+|  U2/Reset_reg_i_2_n_2   |                                  | U2/Reset_reg_i_3_n_2 |                2 |              5 |
+|  CLK_BUFG               |                                  | state0               |                2 |              6 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[1]       | PC0                  |                1 |              7 |
+|  CLK_BUFG               | din[23]_i_1_n_2                  |                      |                2 |              8 |
+|  CLK_BUFG               | din[63]_i_1_n_2                  |                      |                3 |              8 |
+|  CLK_BUFG               | din[31]_i_1_n_2                  |                      |                4 |              8 |
+|  CLK_BUFG               | din[39]_i_1_n_2                  |                      |                1 |              8 |
+|  CLK_BUFG               | din[15]_i_1_n_2                  |                      |                2 |              8 |
+|  CLK_BUFG               | din[47]_i_1_n_2                  |                      |                1 |              8 |
+|  CLK_BUFG               | din[55]_i_1_n_2                  |                      |                1 |              8 |
+|  CLK_BUFG               | din[7]_i_1_n_2                   |                      |                4 |              8 |
+|  CLK_BUFG               | ukey[127]_i_1_n_2                |                      |                3 |              8 |
+|  CLK_BUFG               | ukey[15]_i_1_n_2                 |                      |                1 |              8 |
+|  CLK_BUFG               | ukey[31]_i_1_n_2                 |                      |                1 |              8 |
+|  CLK_BUFG               | ukey[103]_i_1_n_2                |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[39]_i_1_n_2                 |                      |                1 |              8 |
+|  CLK_BUFG               | ukey[47]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[55]_i_1_n_2                 |                      |                1 |              8 |
+|  CLK_BUFG               | ukey[119]_i_1_n_2                |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[23]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[79]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[95]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[71]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[63]_i_1_n_2                 |                      |                3 |              8 |
+|  CLK_BUFG               | ukey[7]_i_1_n_2                  |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[87]_i_1_n_2                 |                      |                2 |              8 |
+|  CLK_BUFG               | ukey[111]_i_1_n_2                |                      |                1 |              8 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[1]_0     | PC[10]_i_1_n_2       |                4 |              9 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_5[0]  | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_2[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[0]_rep_1[0]     | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_3[0]         | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_5[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_10[0]        | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_9[0]         | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_0[0]  | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep_0[0]     | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_5[0]         | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_2[0]  | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_8[0]         | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_6[0]         | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_11[0]        | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_4[0]  | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_0[0]         | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_13[0]        | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[0]_rep__0_0[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_2[0]         | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[0]_rep_2[0]     | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[0]_rep__0_1[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_4[0]         | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_7[0]         | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_rep__0_0[0]  | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_1[0]         | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_3[0]  | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[2]_12[0]        | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[1]_rep__0_1[0]  | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_11[0] | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_12[0] | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_2[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_5[0]     | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_3[0]  | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_1[0]  | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4][0]    | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_0[0]     | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/E[0]                          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_7[0]     | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_4[0]     | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_3[0]  | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_0[0]  | U3/Mem[111]_0        |               11 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[4]_rep_6[0]     | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[4]_rep_4[0]     | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_3[0]     | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[7]_0[0]         | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[4]_rep_0[0]     | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[4]_rep_5[0]     | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_8[0]     | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[5]_0[0]         | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_9[0]     | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4][0]    | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_1[0]  | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_10[0] | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/ALUResult_reg[3]_rep_2[0]     | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[24][15]_i_3_0[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[2][15]_i_3_1[0]           | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[32][15]_i_2_0[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_1[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[62][15]_i_3_0[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_2[0]          | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/Mem[2][15]_i_3_2[0]           | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_3[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_0[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[37][15]_i_4_3[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_1[0]          | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_2[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[9][15]_i_4_0[0]           | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/Mem[6][15]_i_2_0[0]           | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_6[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_3[0]          | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_4[0]          | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_7[0]          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_0[0]          | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_9[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_5[0]          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[9][15]_i_5_0[0]           | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[69][15]_i_4_1[0]          | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/Mem[2][15]_i_3_4[0]           | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_2[0]          | U3/Mem[111]_0        |                9 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_4[0]          | U3/Mem[111]_0        |               11 |             16 |
+| ~CLK_BUFG               | U1/Mem[33][15]_i_4_0[0]          | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_4[0]          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[99][15]_i_3_0[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_7[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_8[0]  | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/Mem[24][15]_i_4_0[0]          | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/Mem[37][15]_i_4_0[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[37][15]_i_4_1[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[37][15]_i_4_4[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_5[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_0[0]          | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_1[0]          | U3/Mem[111]_0        |                9 |             16 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_7[0]          | U3/Mem[111]_0        |                4 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_5[0]          | U3/Mem[111]_0        |                9 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_6[0]          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[74][15]_i_2_8[0]          | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_4[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_3[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_6[0]  | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/Mem[69][15]_i_5_0[0]          | U3/Mem[111]_0        |                5 |             16 |
+| ~CLK_BUFG               | U1/Mem[2][15]_i_3_3[0]           | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[2][15]_i_3_0[0]           | U3/Mem[111]_0        |                3 |             16 |
+| ~CLK_BUFG               | U1/Mem[37][15]_i_4_2[0]          | U3/Mem[111]_0        |                6 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_9[0]  | U3/Mem[111]_0        |                8 |             16 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[4]_5[0]  | U3/Mem[111]_0        |                7 |             16 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_4[0]  | U3/Mem[111]_0        |                5 |             16 |
+|  CLK100MHZ_IBUF         |                                  | U6/i_cnt[0]_i_1_n_2  |                5 |             20 |
+| ~CLK_BUFG               | U1/Mem[65][15]_i_3_8[0]          | U3/Mem[111]_0        |               12 |             32 |
+|  n_1_2616_BUFG          |                                  |                      |               32 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2]_1[0]  |                      |                9 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2]_0[0]  |                      |               15 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2]_4[0]  |                      |                9 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2]_2[0]  |                      |               10 |             32 |
+| ~CLK_BUFG               | U1/Mem[9][15]_i_4_1[0]           | U3/Mem[111]_0        |               10 |             32 |
+| ~CLK_BUFG               | U2/FSM_onehot_state_reg[4]_6[0]  |                      |               22 |             32 |
+| ~CLK_BUFG               | U1/Mem[48][15]_i_2_6[0]          | U3/Mem[111]_0        |               14 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2]_3[0]  |                      |               11 |             32 |
+| ~CLK_BUFG               | U1/FSM_onehot_state_reg[2][0]    |                      |               10 |             32 |
+| ~CLK_BUFG               | U4/Rec[30][31]_i_1_n_2           | U4/Rec[31]           |               20 |             32 |
+| ~CLK_BUFG               | U4/Rec[25][31]_i_1_n_2           | U4/Rec[31]           |               19 |             32 |
+| ~CLK_BUFG               | U4/Rec[20][31]_i_1_n_2           | U4/Rec[31]           |               18 |             32 |
+| ~CLK_BUFG               | U4/Rec[13][31]_i_1_n_2           | U4/Rec[31]           |               17 |             32 |
+| ~CLK_BUFG               | U4/Rec[3][31]_i_1_n_2            | U4/Rec[31]           |               13 |             32 |
+| ~CLK_BUFG               | U4/Rec[14][31]_i_1_n_2           | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[11][31]_i_1_n_2           | U4/Rec[31]           |               20 |             32 |
+| ~CLK_BUFG               | U4/Rec[10][31]_i_1_n_2           | U4/Rec[31]           |               15 |             32 |
+| ~CLK_BUFG               | U4/Rec[9][31]_i_1_n_2            | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[16][31]_i_1_n_2           | U4/Rec[31]           |               20 |             32 |
+| ~CLK_BUFG               | U4/Rec[24][31]_i_1_n_2           | U4/Rec[31]           |               19 |             32 |
+| ~CLK_BUFG               | U4/Rec[7][31]_i_1_n_2            | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[1][31]_i_2_n_2            | U4/Rec[31]           |               12 |             32 |
+| ~CLK_BUFG               | U4/Rec[2][31]_i_1_n_2            | U4/Rec[31]           |               13 |             32 |
+| ~CLK_BUFG               | U4/Rec[4][31]_i_1_n_2            | U4/Rec[31]           |               17 |             32 |
+| ~CLK_BUFG               | U4/Rec[23][31]_i_1_n_2           | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[17][31]_i_1_n_2           | U4/Rec[31]           |               14 |             32 |
+| ~CLK_BUFG               | U4/Rec[15][31]_i_1_n_2           | U4/Rec[31]           |               18 |             32 |
+| ~CLK_BUFG               | U4/Rec[19][31]_i_1_n_2           | U4/Rec[31]           |               15 |             32 |
+| ~CLK_BUFG               | U4/Rec[5][31]_i_1_n_2            | U4/Rec[31]           |               16 |             32 |
+| ~CLK_BUFG               | U4/Rec[26][31]_i_1_n_2           | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[8][31]_i_1_n_2            | U4/Rec[31]           |               21 |             32 |
+| ~CLK_BUFG               | U4/Rec[22][31]_i_1_n_2           | U4/Rec[31]           |               22 |             32 |
+| ~CLK_BUFG               | U4/Rec[18][31]_i_1_n_2           | U4/Rec[31]           |               16 |             32 |
+| ~CLK_BUFG               | U4/Rec[21][31]_i_1_n_2           | U4/Rec[31]           |               17 |             32 |
+| ~CLK_BUFG               | U4/Rec[29][31]_i_1_n_2           | U4/Rec[31]           |               18 |             32 |
+| ~CLK_BUFG               | U4/Rec[12][31]_i_1_n_2           | U4/Rec[31]           |               20 |             32 |
+| ~CLK_BUFG               | U4/Rec[27][31]_i_1_n_2           | U4/Rec[31]           |               19 |             32 |
+| ~CLK_BUFG               | U4/Rec[31][31]_i_1_n_2           | U4/Rec[31]           |               25 |             32 |
+| ~CLK_BUFG               | U4/Rec[6][31]_i_1_n_2            | U4/Rec[31]           |               18 |             32 |
+| ~CLK_BUFG               | U4/Rec[28][31]_i_1_n_2           | U4/Rec[31]           |               17 |             32 |
+|  n_0_3317_BUFG          |                                  |                      |               22 |             47 |
+| ~CLK_BUFG               | U4/RD1[31]_i_1_n_2               |                      |               36 |             64 |
++-------------------------+----------------------------------+----------------------+------------------+----------------+
+
+

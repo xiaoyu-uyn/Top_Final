@@ -1,0 +1,417 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sat Dec 14 23:46:14 2019
+# Process ID: 10164
+# Current directory: D:/3-Ee/2018/statem/changed_/Top_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7240 D:\3-Ee\2018\statem\changed_\Top_Final\Top_Final.xpr
+# Log file: D:/3-Ee/2018/statem/changed_/Top_Final/vivado.log
+# Journal file: D:/3-Ee/2018/statem/changed_/Top_Final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.runs/impl_1/CPU_top.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.runs/impl_1/CPU_top.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+launch_simulation
+source CPU_top.tcl
+restart
+add_force {/rc5/CLK100MHZ} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/CPU_top/CLK100MHZ} -radix hex {1 0ns}
+restart
+add_force {/CPU_top/CLK100MHZ} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/CPU_top/BTNC} -radix hex {0 0ns}
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTND} -radix hex {0 0ns}
+add_force {/CPU_top/SW1} -radix hex {0000 0ns}
+restart
+add_force {/CPU_top/CLK100MHZ} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/CPU_top/BTNC} -radix hex {0 0ns}
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTND} -radix hex {0 0ns}
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 3000ns
+add_force {/CPU_top/BTNL} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/BTNC} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FE 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {12FE 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FC 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {34FC 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F8 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {56F8 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {78F0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00E0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9aE0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00C0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {bcC0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0080 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {de80 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {f000 0ns}	
+run 100ns
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+run 20000000ns
+restart
+add_force {/CPU_top/CLK100MHZ} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/CPU_top/BTNC} -radix hex {0 0ns}
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTND} -radix hex {0 0ns}
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 3000ns
+add_force {/CPU_top/BTNL} -radix hex {1 0ns}
+run 3000ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/BTNC} -radix hex {1 0ns}
+run 3000ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FE 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {12FE 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FC 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {34FC 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F8 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {56F8 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {78F0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00E0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9aE0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00C0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {bcC0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0080 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {de80 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {f000 0ns}	
+run 100ns
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+run 200000ns
+run 2000000 ns
+launch_simulation -mode post-synthesis -type timing
+source CPU_top.tcl
+restart
+add_force {/CPU_top/CLK100MHZ} -radix hex {0 0ns} {1 5000ps} -repeat_every 10000ps
+add_force {/CPU_top/BTNC} -radix hex {0 0ns}
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTND} -radix hex {0 0ns}
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 3000ns
+add_force {/CPU_top/BTNL} -radix hex {1 0ns}
+run 3000ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/BTNC} -radix hex {1 0ns}
+run 3000ns
+add_force {/CPU_top/SW} -radix hex {0001 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {1201 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0003 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {3403 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0007 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {5607 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {000F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {780F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {001F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9A1F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {003F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {BC3F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {007F 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {DE7F 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FF 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {F0FF 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FE 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {12FE 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00FC 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {34FC 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F8 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {56F8 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00F0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {78F0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00E0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {9aE0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {00C0 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {bcC0 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0080 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {de80 0ns}	
+run 100ns
+add_force {/CPU_top/SW} -radix hex {0000 0ns}
+run 100ns
+add_force {/CPU_top/SW} -radix hex {f000 0ns}	
+run 100ns
+add_force {/CPU_top/BTNL} -radix hex {0 0ns}
+run 600000ns
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+run 1000ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+add_force {/CPU_top/BTNU} -radix hex {0 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {0 0ns}
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+add_force {/CPU_top/BTNR} -radix hex {1 0ns}
+add_force {/CPU_top/BTNU} -radix hex {1 0ns}
+run 100ns
+close_sim
+close_sim

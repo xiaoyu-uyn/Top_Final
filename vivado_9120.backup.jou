@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Thu Dec  5 23:24:04 2019
+# Process ID: 9120
+# Current directory: D:/3-Ee/2018/statem/changed_/Top_Final
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17288 D:\3-Ee\2018\statem\changed_\Top_Final\Top_Final.xpr
+# Log file: D:/3-Ee/2018/statem/changed_/Top_Final/vivado.log
+# Journal file: D:/3-Ee/2018/statem/changed_/Top_Final\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation

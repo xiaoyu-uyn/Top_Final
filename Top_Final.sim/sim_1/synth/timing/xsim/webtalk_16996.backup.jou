@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Sun Dec  8 19:03:05 2019
+# Process ID: 16996
+# Current directory: D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.sim/sim_1/synth/timing/xsim
+# Command line: wbtcv.exe -mode batch -source D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.sim/sim_1/synth/timing/xsim/xsim.dir/CPU_top_time_synth/webtalk/xsim_webtalk.tcl -notrace
+# Log file: D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.sim/sim_1/synth/timing/xsim/webtalk.log
+# Journal file: D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.sim/sim_1/synth/timing/xsim\webtalk.jou
+#-----------------------------------------------------------
+source D:/3-Ee/2018/statem/changed_/Top_Final/Top_Final.sim/sim_1/synth/timing/xsim/xsim.dir/CPU_top_time_synth/webtalk/xsim_webtalk.tcl -notrace
